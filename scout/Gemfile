@@ -28,6 +28,10 @@ gem 'spring',        group: :development
 
 gem 'typhoeus'
 
+gem 'pry-rails'
+
+gem 'awesome_print'
+
 group :development, :test do
   gem 'dotenv-rails'
 end
