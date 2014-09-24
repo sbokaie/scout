@@ -1,11 +1,14 @@
 class ChannelsController < ApplicationController
   def index
-      request = Typhoeus.get(
-        "https://www.googleapis.com/youtube/v3/channels?part=+statistics%2C+snippet&forUsername=petroliciousco&key=AIzaSyAp9cRjnSBQIWAdLqRUyWx2OEaY6UCNBFI")
 
-      # + params[:query] +
+    if params[:query]
+
+    url =  "https://www.googleapis.com/youtube/v3/channels?part=+statistics%2C+snippet&forUsername=" + params[:query] +"&key=AIzaSyAp9cRjnSBQIWAdLqRUyWx2OEaY6UCNBFI"
+    puts url
+      request = Typhoeus.get(url)
+
       @results = JSON.parse(request.body)
-
+    
       @username = @results["items"][0]["snippet"]["title"]
       @user_description = @results["items"][0]["snippet"]["description"]
       # According to Docs, image may not be accessible, need to look into
@@ -14,6 +17,7 @@ class ChannelsController < ApplicationController
       @subscriber_count = @results["items"][0]["statistics"]["subscriberCount"]
       @view_count = @results["items"][0]["statistics"]["viewCount"]
       @video_count = @results["items"][0]["statistics"]["videoCount"]
+    end
 
       @all_channels = []
       @channels = Channel.all
