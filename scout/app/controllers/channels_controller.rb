@@ -1,4 +1,8 @@
 class ChannelsController < ApplicationController
+  # Add ability to respond_to json
+  # The route will become /.json 
+  # That way, our AJAX call returns JSON that we then put on the page
+
   def index
 
     if params[:query]
@@ -8,7 +12,7 @@ class ChannelsController < ApplicationController
       request = Typhoeus.get(url)
 
       @results = JSON.parse(request.body)
-    
+
       @username = @results["items"][0]["snippet"]["title"]
       @user_description = @results["items"][0]["snippet"]["description"]
       # According to Docs, image may not be accessible, need to look into
@@ -31,6 +35,14 @@ class ChannelsController < ApplicationController
 
       @all_channels.push new_channel
     end
+      respond_to do |f|
+        f.html
+        f.json {render json: request.body}
+      end
+  end
+
+  def hold
+    binding.pry
   end
 end
 
