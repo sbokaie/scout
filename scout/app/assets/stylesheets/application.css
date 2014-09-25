@@ -10,6 +10,19 @@
  * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
  * file per style scope.
  *
- *= require_tree .
+ *= require "bootstrap.css"
+ *= require "main.css"
+ *= require "soon.css"
  *= require_self
  */
+
+/*#queryParam {
+  width: 200px;
+  background-position: center;
+  margin: 0 auto;
+  display: block;
+/*  background-color: #E85639;*/
+
+#results {
+  background-color: black;
+}

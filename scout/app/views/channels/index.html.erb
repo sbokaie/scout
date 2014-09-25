@@ -1,8 +1,64 @@
- <div class="container" id="results">
+<!DOCTYPE html>
+<html>
+  <head>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="shortcut icon" href="assets/ico/favicon.png">
+
+    <title>Scout</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="stylesheets/bootstrap.css" rel="stylesheet">
+
+   
+    <link href="stylesheets/soon.css" rel="stylesheet">
 
 
-  <div id="holdList" class="container">
-  </div>
-</div>
- 
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="assets/js/html5shiv.js"></script>
+      <script src="assets/js/respond.min.js"></script>
+    <![endif]-->
+    
+    <link href='http://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Raleway:400,300,700' rel='stylesheet' type='text/css'>
 
+  </head>
+
+  <body class="nomobile">
+    <section id="header">
+        <div class="container">
+            <header>
+                <h1 data-animated="GoIn"><b>SCOUT</b> isn't perfect but yolo...</h1>
+            </header>
+            <div class="col-lg-4 col-lg-offset-4 mt centered">
+              <h4>Search YouTube</h4>
+
+        <form id="usernameSearch" class="submit_search form-inline" role="search" action="/">
+          <div class="form-group">
+            <input type="text" class="form-control" id="queryParam" name="query" placeholder="Enter username ...">
+          </div> 
+          <button type="submit" class="btn btn-default"><span class="glyphicon glyphicon-search"></span></button>
+        </form> 
+      </div>
+    </div>
+    <div id="results"></div>
+    
+        <div id="layer"></div>
+
+        <!-- END SLIDER -->
+    </section>
+    <!-- END HEADER -->
+
+    <script src="app/assets/javascripts/js/jquery.min.js"></script>
+  <script type="text/javascript" src="app/assets/javascripts/js/modernizr.custom.js"></script>
+    <script src="app/assets/javascripts/js/bootstrap.min.js"></script>
+    <script src="app/assets/javascripts/js/soon/plugins.js"></script>
+    <script src="app/assets/javascripts/js/soon/jquery.themepunch.revolution.min.js"></script>
+    <script src="app/assets/javascripts/js/soon/custom.js"></script>
+  </body>
+
+</html>

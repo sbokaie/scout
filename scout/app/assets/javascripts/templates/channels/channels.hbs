@@ -1,15 +1,13 @@
 
-  <div class="row result">
-    <div class="col-sm-4 col-md-4">
+  <div class="row-result">
+    <div class="col-md-12 centered">
       <div class="thumbnail" data-atr-channel-id={{channelid}}>
+
         <h3> {{username}} </h3>
-        <ul>
-          <li class="viewCount">Total Views: <strong>{{viewCount}}</strong> </li>
-          <li>Subscribers: <strong>{{subscriberCount}}</strong> </li>
-          <li>Total Videos: <strong>{{videoCount}}</strong></li>
-        </ul>
-        <p><a href="#" class="btn btn-default" role="button">View</a></p>
-        <button class="btn btn-primary hold">Hold</button>
+        <p> {{description}} </p>
+        <div class="col-md-4"><span class="glyphicon glyphicon-eye-open"></span> Total Views: <strong>{{viewCount}}</strong></div>
+        <div class="col-md-4"><span class="glyphicon glyphicon-dashboard"></span> Subscribers: <strong>{{subscriberCount}}</strong></div> 
+        <div class="col-md-4"><span class="glyphicon glyphicon-play"></span> Total Videos: <strong>{{videoCount}}</strong></div>
       </div>
     </div>
   </div>

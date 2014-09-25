@@ -7,7 +7,7 @@ class ChannelsController < ApplicationController
 
     if params[:query]
 
-    url =  "https://www.googleapis.com/youtube/v3/channels?part=+statistics%2C+snippet&forUsername=" + params[:query] +"&key=AIzaSyAp9cRjnSBQIWAdLqRUyWx2OEaY6UCNBFI"
+    url =  "https://www.googleapis.com/youtube/v3/channels?part=+statistics%2C+snippet&forUsername=" + params[:query] + "&key=AIzaSyAp9cRjnSBQIWAdLqRUyWx2OEaY6UCNBFI"
     puts url
       request = Typhoeus.get(url)
 
@@ -41,9 +41,7 @@ class ChannelsController < ApplicationController
       end
   end
 
-  def hold
-    binding.pry
-  end
+
 end
 
 

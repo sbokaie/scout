@@ -14,7 +14,8 @@
 //= require jquery_ujs
 //= require handlebars.runtime
 //= require_tree ./templates
-//= require_tree .
+//= require_tree ./
+
 
 var scout = {};
 
@@ -28,9 +29,6 @@ $(function(){
           console.log(data)
           alert("successfully saved!")
         })
-
-      // this is where you save to the database
-      // then update fresh data as new entries
   })
 
   $("#usernameSearch").on("submit", function(event){
@@ -52,9 +50,6 @@ $(function(){
         result = HandlebarsTemplates['channels/channels'](source);
         $("#results").append(result)
         
-        
-
- 
     })
   })
 })
